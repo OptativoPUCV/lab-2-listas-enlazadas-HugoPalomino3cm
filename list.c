@@ -32,12 +32,13 @@ List * createList() {
     List *L = (List *) malloc(sizeof(List));
     L->head = NULL;
     L->tail = NULL;
-    //L->current = NULL;
+    L->current = NULL;
     return L;
 }
 
 void * firstList(List * list) {
-    return NULL;
+    if (list->head == NULL) return NULL;
+    return list->head;
 }
 
 void * nextList(List * list) {
