@@ -370,3 +370,9 @@ list.c:34:6: error: 'List {aka struct List}' has no member named 'size'
       ^~
 Compilation failed
 8ba18e4
+Tue, Mar 25, 2025  8:09:59 PM: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/70
+2b26a27
