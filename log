@@ -360,3 +360,13 @@ list.c:32:11: error: 'L' defined but not used [-Werror=unused-function]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 7cb6f59
+Tue, Mar 25, 2025  8:08:39 PM: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function 'createList':
+list.c:34:6: error: 'List {aka struct List}' has no member named 'size'
+     L->size = 0;
+      ^~
+Compilation failed
+8ba18e4
