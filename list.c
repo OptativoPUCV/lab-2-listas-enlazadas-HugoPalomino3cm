@@ -109,7 +109,12 @@ void * popFront(List * list) {
         list->head->prev = NULL;
     }
     free(nodoEliminar);
+    //dudoso ??? 
     return dato;
+
+
+    /*list->current = list->head;
+    return popCurrent(list);*/
 }
 
 void * popBack(List * list) {
