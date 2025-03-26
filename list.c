@@ -56,9 +56,9 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    if (list->head == NULL || list == NULL) return NULL;
+    if (list->head->prev == NULL || list == NULL) return NULL;
     list->current = list->head->prev;
-    return list->head->data;
+    return list->current->data;
 }
 
 void pushFront(List * list, void * data) {
