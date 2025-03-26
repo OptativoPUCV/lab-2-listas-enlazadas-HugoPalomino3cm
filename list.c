@@ -64,8 +64,8 @@ void pushFront(List * list, void * data) {
     list->head = nuevoNodo;
     
     /*porque hago esta condicion no lo entiendo porque si 
-     solo coloco list->tail = nuevoNodo 
-      igual me dan los puntos siendo que el tail deberia apuntar al ultimo ??????????xd*/
+    solo coloco list->tail = nuevoNodo (sin el if)
+    igual me dan los puntos siendo que el tail deberia apuntar al ultimo */
     if (list->tail == NULL) list->tail = nuevoNodo;
 }
 
