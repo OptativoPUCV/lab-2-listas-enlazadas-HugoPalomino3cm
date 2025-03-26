@@ -67,9 +67,6 @@ void pushFront(List * list, void * data) {
     nuevoNodo->next = list->head;
     list->head = nuevoNodo;
     
-    /*porque hago esta condicion no lo entiendo porque si 
-    solo coloco list->tail = nuevoNodo (sin el if)
-    igual me dan los puntos siendo que el tail deberia apuntar al ultimo */
     if (list->tail == NULL) list->tail = nuevoNodo;
 }
 
@@ -80,15 +77,20 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
     Node *nuevoNodo = createNode(data);
-    if (list->tail == NULL) {
+    if (list->head == NULL){
         list->head = nuevoNodo;
         list->tail = nuevoNodo;
-    } else {
-        list->tail->next = nuevoNodo; 
-        list->tail = nuevoNodo;       
+        list->current = nuevoNodo;
+        return;
     }
-
-    list->current = nuevoNodo; 
+    if (list->current == list->tail){
+        list->current->next = nuevoNodo;
+        list->tail = nuevoNodo;
+    }
+    else{
+        nuevoNodo->next = list->current->next;
+        list->current->next = nuevoNodo;
+    }
 }
 
 void * popFront(List * list) {
