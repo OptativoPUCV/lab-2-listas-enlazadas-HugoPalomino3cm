@@ -714,3 +714,39 @@ list.c:125:8: note: declared here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0c57cdf
+Wed, Mar 26, 2025 11:57:04 PM: 
+ list.c | 28 ++++++++++++++++++++++------
+ 1 file changed, 22 insertions(+), 6 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'popFront':
+list.c:99:25: error: invalid initializer
+     Node nodoEliminar = list->head;
+                         ^~~~
+list.c:100:30: error: invalid type argument of '->' (have 'Node {aka struct Node}')
+     void *dato = nodoEliminar->dato;
+                              ^~
+list.c:111:10: error: incompatible type for argument 1 of 'free'
+     free(nodoEliminar);
+          ^~~~~~~~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:487:39: note: expected 'void *' but argument is of type 'Node {aka struct Node}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  void free (void *);
+                                       ^~~~
+In file included from test.c:5:0:
+list.c: In function 'popCurrent':
+list.c:126:40: error: comparison between pointer and integer [-Werror]
+     if (list == NULL || !list->current == NULL) return NULL;
+                                        ^~
+list.c:128:9: error: 'curr' undeclared (first use in this function)
+     if (curr->prev) {
+         ^~~~
+list.c:128:9: note: each undeclared identifier is reported only once for each function it appears in
+list.c:147:12: error: 'data' undeclared (first use in this function)
+     return data;
+            ^~~~
+list.c:148:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+913d162
