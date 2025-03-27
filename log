@@ -863,3 +863,28 @@ c:\mingw\include\stdlib.h:487:39: note: expected 'void *' but argument is of typ
                                        ^~~~
 Compilation failed
 60499f6
+Thu, Mar 27, 2025 12:04:53 AM: 
+ list.c | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'popFront':
+list.c:99:25: error: invalid initializer
+     Node nodoEliminar = list->head;
+                         ^~~~
+list.c:100:30: error: invalid type argument of '->' (have 'Node {aka struct Node}')
+     void *dato = nodoEliminar->dato;
+                              ^~
+list.c:111:10: error: incompatible type for argument 1 of 'free'
+     free(nodoEliminar);
+          ^~~~~~~~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:487:39: note: expected 'void *' but argument is of type 'Node {aka struct Node}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  void free (void *);
+                                       ^~~~
+In file included from test.c:5:0:
+list.c: At top level:
+list.c:144:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+Compilation failed
+ff60d49
