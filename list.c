@@ -110,7 +110,7 @@ void * popCurrent(List * list) {
     Node *der = list->current->next;
     void *datardo = list->current->data;
     
-    
+    return NULL;
 }
 
 
