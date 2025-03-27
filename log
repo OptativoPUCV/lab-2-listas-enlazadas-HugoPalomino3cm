@@ -810,3 +810,36 @@ list.c:126:40: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 fef06c6
+Thu, Mar 27, 2025 12:02:46 AM: 
+ list.c | 32 +++++++-------------------------
+ 1 file changed, 7 insertions(+), 25 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'popFront':
+list.c:99:25: error: invalid initializer
+     Node nodoEliminar = list->head;
+                         ^~~~
+list.c:100:30: error: invalid type argument of '->' (have 'Node {aka struct Node}')
+     void *dato = nodoEliminar->dato;
+                              ^~
+list.c:111:10: error: incompatible type for argument 1 of 'free'
+     free(nodoEliminar);
+          ^~~~~~~~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:487:39: note: expected 'void *' but argument is of type 'Node {aka struct Node}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  void free (void *);
+                                       ^~~~
+In file included from test.c:5:0:
+list.c: In function 'popCurrent':
+list.c:128:5: error: expected ',' or ';' before 'void'
+     void *datardo = list->current->data;
+     ^~~~
+list.c:132:12: error: 'datardo' undeclared (first use in this function)
+     return datardo;
+            ^~~~~~~
+list.c:132:12: note: each undeclared identifier is reported only once for each function it appears in
+list.c:133:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+23cd34e
