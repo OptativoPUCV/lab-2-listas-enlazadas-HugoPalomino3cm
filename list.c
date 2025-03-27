@@ -110,17 +110,7 @@ void * popCurrent(List * list) {
     Node *der = list->current->next;
     void *datardo = list->current->data;
     
-    if (izq != NULL) izq->next = der;
-    if (der != NULL) der->prev = izq;
     
-    if (izq == NULL) list->head = der;
-    if (der == NULL) list->tail = izq;
-    
-    free(list->current);
-    if (der != NULL) list->current = der;
-    else list->current = izq;
-    
-    return datardo;
 }
 
 
