@@ -682,3 +682,35 @@ list.c:131:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1.exe: all warnings being treated as errors
 Compilation failed
 5352e77
+Wed, Mar 26, 2025 11:52:27 PM: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:0:
+list.c: In function 'popFront':
+list.c:99:25: error: invalid initializer
+     Node nodoEliminar = list->head;
+                         ^~~~
+list.c:100:30: error: invalid type argument of '->' (have 'Node {aka struct Node}')
+     void *dato = nodoEliminar->dato;
+                              ^~
+list.c:111:10: error: incompatible type for argument 1 of 'free'
+     free(nodoEliminar);
+          ^~~~~~~~~~~~
+In file included from test.c:2:0:
+c:\mingw\include\stdlib.h:487:39: note: expected 'void *' but argument is of type 'Node {aka struct Node}'
+ _CRTIMP __cdecl __MINGW_NOTHROW  void free (void *);
+                                       ^~~~
+In file included from test.c:5:0:
+list.c: In function 'popCurrent':
+list.c:128:5: error: expected ',' or ';' before 'if'
+     if (izq == NULL || der  == NULL) return NULL;
+     ^~
+list.c:131:5: error: 'return' with no value, in function returning non-void [-Werror]
+     return;
+     ^~~~~~
+list.c:125:8: note: declared here
+ void * popCurrent(List * list) {
+        ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0c57cdf

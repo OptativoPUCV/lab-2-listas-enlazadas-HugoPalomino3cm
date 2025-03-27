@@ -128,6 +128,7 @@ void * popCurrent(List * list) {
     if (izq == NULL || der  == NULL) return NULL;
     izq->next = der;
     der->prev = izq;
+    return;
 }
 
 void cleanList(List * list) {
