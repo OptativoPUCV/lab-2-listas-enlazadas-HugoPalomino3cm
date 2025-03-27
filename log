@@ -968,3 +968,9 @@ list.c:111:11: error: unused variable 'datardo' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 58ab418
+Thu, Mar 27, 2025  3:22:27 PM: 
+ list.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+a8bb325
