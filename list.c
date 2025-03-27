@@ -141,7 +141,7 @@ void * popCurrent(List * list) {
     
     return datardo;
 }
-}
+
 
 void cleanList(List * list) {
     while (list->head != NULL) {
