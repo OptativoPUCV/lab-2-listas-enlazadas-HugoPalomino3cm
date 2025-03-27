@@ -123,7 +123,11 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+    Node *izq = list->current->prev;
+    Node *der = list->current->next
+    if (izq == NULL || der  == NULL) return NULL;
+    izq->next = der;
+    der->prev = izq;
 }
 
 void cleanList(List * list) {
