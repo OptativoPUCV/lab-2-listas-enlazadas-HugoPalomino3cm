@@ -951,3 +951,9 @@ list.c:109:11: error: unused variable 'izq' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b72a1cd
+Thu, Mar 27, 2025 11:34:04 AM: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  11|1
+total_score: 55/70
+1aff406
