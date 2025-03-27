@@ -94,27 +94,8 @@ void pushCurrent(List * list, void * data) {
 }
 
 void * popFront(List * list) {
-    if (list->head == NULL) return NULL;
-    
-    Node nodoEliminar = list->head;
-    void *dato = nodoEliminar->dato;
-
-    if (list->head == list->tail){
-        list->head = NULL;
-        list->tail = NULL;
-        list->current = NULL;
-    }
-    else{
-        list->head = list->head->next;
-        list->head->prev = NULL;
-    }
-    free(nodoEliminar);
-    //dudoso ??? 
-    return dato;
-
-
-    /*list->current = list->head;
-    return popCurrent(list);*/
+    list->current = list->head;
+    return popCurrent(list);
 }
 
 void * popBack(List * list) {

@@ -908,3 +908,9 @@ c:\mingw\include\stdlib.h:487:39: note: expected 'void *' but argument is of typ
                                        ^~~~
 Compilation failed
 d420100
+Thu, Mar 27, 2025 12:06:23 AM: 
+ list.c | 23 ++---------------------
+ 1 file changed, 2 insertions(+), 21 deletions(-)
+ tests:  12|0
+total_score: 70/70
+fa722e7
